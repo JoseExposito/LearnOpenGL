@@ -16,9 +16,9 @@ const char *vertexShaderSource =
 
 const char *fragmentShaderSource =
     "#version 330 core\n"
-    "out vec4 FragColor;"
-    "void main() {"
-    "  FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);"
+    "out vec4 FragColor;\n"
+    "void main() {\n"
+    "  FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
     "}\0";
 
 static void framebufferSizeCallback(GLFWwindow* window, int width, int height)
@@ -87,7 +87,7 @@ int main(int argc, char **argv)
     unsigned int shaderProgram;
     shaderProgram = glCreateProgram();
     glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, vertexShader);
+    glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
 
     glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
