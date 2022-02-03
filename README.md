@@ -1,3 +1,3 @@
 # LearnOpenGL
 
-Mu learnopengl.com exercises.
+My learnopengl.com exercises.
